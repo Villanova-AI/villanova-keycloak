@@ -1,13 +1,13 @@
 FROM quay.io/keycloak/keycloak:18.0.2-legacy
-LABEL MAINTAINER="Entando <dev@entando.com>"
+LABEL MAINTAINER="Villanova <dev@villanova.com>"
 ARG VERSION
-LABEL name="Entando Keycloak" \
-      vendor="Entando" \
+LABEL name="Villanova Keycloak" \
+      vendor="Villanova" \
       version="v${VERSION}" \
-      release="7" \
-      summary="Keycloak with Entando's themes and extensions." \
-      description="This is container hosts Keycloak along with themes created for Entando."
-COPY LICENSE /licences/entando-lgpl.txt
+      release="0.9" \
+      summary="Keycloak with Villanova's themes and extensions." \
+      description="This is container hosts Keycloak along with themes created for Villanova."
+COPY LICENSE /licences/villanova-lgpl.txt
 
 COPY themes /opt/jboss/keycloak/themes
 COPY --chown=jboss:root cli /opt/jboss/tools/cli/
@@ -20,7 +20,7 @@ RUN export KEYCLOAK_HTTP_PORT=8080 && \
       mkdir driver && \
       curl https://repo1.maven.org/maven2/com/oracle/database/jdbc/ojdbc8/${ORACLE_JDBC_DRIVER_VERSION}/ojdbc8-${ORACLE_JDBC_DRIVER_VERSION}.jar -o driver/ojdbc.jar
 
-ENV KEYCLOAK_DEFAULT_THEME="entando" \
+ENV KEYCLOAK_DEFAULT_THEME="villanova" \
     KEYCLOAK_HOME="/opt/jboss/keycloak" \
     HOME="/home/jboss"
     

@@ -1,5 +1,5 @@
-# Entando Keycloak Theme
-This repository contains a Keycloak instance with some custom Entando themes that change the appearance of:
+# Villanova Keycloak Theme
+This repository contains a Keycloak instance with some custom Villanova themes that change the appearance of:
 
 * Keycloak SSO login screen
 * Keycloak admin console
@@ -31,6 +31,6 @@ docker-compose up --build
 If anything goes wrong, you can force removing the docker image with 
 
 ```
-docker rmi entando/keycloak --force
+docker rmi villanova/keycloak --force
 docker-compose up --build
 ```

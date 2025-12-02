@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>${msg("loginTitle",(realm.displayName!''))}</title>
-  <link href="${url.resourcesPath}/img/favicon-entando.png" rel="icon"/>
+  <link href="${url.resourcesPath}/img/favicon-villanova.png" rel="icon"/>
   <link href="${url.resourcesPath}/css/login.css" rel="stylesheet" type="text/css">
   <link href="${url.resourcesPath}/css/zocial.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +24,7 @@
       <#nested "form">
       <#assign aDateTime = .now>
       <#assign aDate = aDateTime?date>
-      <div class="LoginPage__copyright">${msg("copyright")} ${aDate?string.yyyy} <a href="https://www.entando.com/" class="LoginPage__url">Entando</a></div>
+      <div class="LoginPage__copyright">${msg("copyright")} ${aDate?string.yyyy} <a href="https://www.villanova.ai/" class="LoginPage__url">Villanova</a></div>
     </div>
   </div>
 </body>
